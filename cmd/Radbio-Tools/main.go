@@ -6,6 +6,10 @@ import (
 )
 
 func main() {
-	fmt.Println(atomic_physics.ElectronicConfiguration(13))
+	var i int
+
+	fmt.Print("Type a number: ")
+	fmt.Scan(&i)
+	fmt.Println(atomic_physics.ElectronicConfiguration(i))
 
 }
