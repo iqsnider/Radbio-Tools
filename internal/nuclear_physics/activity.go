@@ -5,20 +5,18 @@ import (
 )
 
 type Isotope struct {
-	Element        string
-	Atomic_number  int
-	Proton_number  int
-	Neutron_number int
-	Halflife       *float64
-	Decayconstant  *float64
+	Element       *string
+	Atomic_number *int
+	Proton_number *int
+	Halflife      *float64
+	Decayconstant *float64
 }
 
 func NewIsotope(element string, atomic_number, proton_number int, optional ...float64) *Isotope {
 	i := &Isotope{
-		Element:        element,
-		Atomic_number:  atomic_number,
-		Proton_number:  proton_number,
-		Neutron_number: atomic_number - proton_number,
+		Element:       &element,
+		Atomic_number: &atomic_number,
+		Proton_number: &proton_number,
 	}
 
 	// set halflife if provided

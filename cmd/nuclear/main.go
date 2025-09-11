@@ -6,7 +6,7 @@ import (
 )
 
 func main() {
-	isotope := nuclear_physics.NewIsotope("Mo", 99, 42, 65.924)
+	isotope := nuclear_physics.NewIsotope("I", 125, 53, 59.407)
 	fmt.Println(isotope.TimeToActivity(0.0001))
 
 }
