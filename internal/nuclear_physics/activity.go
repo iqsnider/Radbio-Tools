@@ -12,25 +12,25 @@ type Isotope struct {
 	Decayconstant *float64
 }
 
-func NewIsotope(element string, atomic_number, proton_number int, optional ...float64) *Isotope {
-	i := &Isotope{
-		Element:       &element,
-		Atomic_number: &atomic_number,
-		Proton_number: &proton_number,
-	}
-
-	// set halflife if provided
-	if len(optional) > 0 {
-		i.Halflife = &optional[0]
-	}
-
-	// set decayconstant if provided
-	if len(optional) > 1 {
-		i.Decayconstant = &optional[1]
-	}
-
-	return i
-}
+// func NewIsotope(element string, atomic_number, proton_number int, optional ...float64) *Isotope {
+// 	i := &Isotope{
+// 		Element:       &element,
+// 		Atomic_number: &atomic_number,
+// 		Proton_number: &proton_number,
+// 	}
+//
+// 	// set halflife if provided
+// 	if len(optional) > 0 {
+// 		i.Halflife = &optional[0]
+// 	}
+//
+// 	// set decayconstant if provided
+// 	if len(optional) > 1 {
+// 		i.Decayconstant = &optional[1]
+// 	}
+//
+// 	return i
+// }
 
 // calculate time to a given activity percentage
 func (iso *Isotope) TimeToActivity(target_activity_percent float64) float64 {
